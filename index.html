@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="adOuter">
+        <div class="videoOuter">
+            <video class="video" src="https://player.vimeo.com/external/258653822.sd.mp4?s=bea019062138a91eb92750d9c751a776ab9f9809&amp;profile_id=165"
+                preload playsinline autoplay loop muted></video>
+            <div class="playArrow">▶</div>
+        </div>
+        <div class="panel">
+            <div class="panelText">
+                <div>Lorem1 ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmo d tempor incididunt ut labore et
+                    dolore magna
+                </div>
+            </div>
+            <a target="__blank" href="https://ads.qz.com/sponsors/ann-taylor/right-pants/2018-03-05/preview/desktop/engage/readysetgo1">
+            <button class="learnMoreButton">Learn more</button>
+        </a>
+        </div>
+        <div class="videoClose">x</div>
+    </div>
+    <script>
+        const adOuter = document.getElementsByClassName('adOuter')[0];
+        const playArrow = document.getElementsByClassName('playArrow')[0];
+        const videoClose = document.getElementsByClassName('videoClose')[0];
+        const video = document.getElementsByClassName('video')[0];
+
+        const playVideo = () => {
+            adOuter.classList.add('videoMode');
+            video.load();
+        }
+
+        playArrow.onclick = () => playVideo();
+        videoClose.onclick = () => adOuter.classList.remove('videoMode');
+    </script>
+</body>
+
+</html>
